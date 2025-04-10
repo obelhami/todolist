@@ -27,10 +27,13 @@ function render_todo()
         console.log(date);
         if (todo.trim() && date.trim())
         {
-            const html= `<div class="test">${todo} </div> <div class="test">${date}</div> 
-            <div class="test"> <button onclick="
+            const html= `<div class="todo-item">
+            <div class="test">${todo} </div> 
+            <div class="test">${date}</div> 
+            <div class="test"> <button class="button_delete" onclick="
                 delete_todo(${i});
             ">Delete</button>
+            </div>
             </div>`;
             htmltodo += html;
             flag = 1;
