@@ -1,12 +1,13 @@
 body{
-    background-color: #445870;
+    background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: "Young Serif", serif;
-    color: #d9dde2
-    ;
+    color: #333333;
+    padding: 0;
+    margin: 0;
 }
 
 .block
@@ -14,23 +15,34 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 800px;
+    justify-content: start;
+    max-width: 1150px;
     width: 100%;
     margin-inline: auto;
-    margin-top: 100px;
-    padding: 50px;
-    /* height: 100%; */
     overflow-x: hidden;
+    padding: 50px;
     gap: 50px;
-    background-color: #445870;
-    box-shadow: 0px 0px 40px #ffffff49;
+    /* background-color: #00000017; */
+    /* box-shadow: 0px 0px 10px #00000049; */
     /* border: 10px solid #dab39e; */
     border-radius: 50px;
 }
 
 .tittle{
-    font-size: 50px;
-    text-decoration:underline;
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 60px;
+    /* background-color: #004000; */
+    max-width: 1450px;
+    width: 100%;
+    /* text-decoration:underline; */
+    /* margin-bottom: 200px; */
+}
+
+img{
+    width: 100px;
 }
 
 .input_date_css, .input_todo_css
@@ -60,7 +72,7 @@ body{
 .inputs
 {
     display: grid;
-    grid-template-columns: 250px 200px 100px;
+    grid-template-columns: 450px 400px 300px;
     /* flex-direction: row; */
     gap: 20px;
 }
@@ -68,7 +80,7 @@ body{
 input{
     border: none;
     border-radius: 8px;
-    background-color: #d9dde2;
+    background-color: #e5e5e5;
 }
 
 input::placeholder
@@ -86,7 +98,7 @@ input:focus::placeholder
     padding-inline: 50px;
     border: none;
     border-radius: 10px;
-    background-color: #8e9aa9;
+    background-color: #333333;
     font-size: large;
     font-weight: bold;
     color: white;
@@ -110,16 +122,22 @@ input:focus::placeholder
 .todo-item
 {
     display: grid;
-    grid-template-columns: 250px 200px 100px;
+    grid-template-columns: 450px 400px 300px;
     gap: 20px;
     margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.067);
+
+    /* height: 0px; */
+    /* overflow-y: hidden; */
+    /* transition: height 1.3s ease-in-out; */
 }
 
-.test
+.test 
 {
     word-wrap: break-word;
-    max-width: 300px;
+    max-width: 450px;
     padding: 5px;
+    /* border-right: 1px solid rgba(0, 0, 0, 0.091); */
 }
 
 .button_delete
@@ -128,11 +146,12 @@ input:focus::placeholder
     height: 40px;
     border: none;
     border-radius: 10px;
-    background-color: #8e9aa9;
+    background-color: #e50000;
     font-size: large;
     font-weight: bold;
     color: #fcf9ee;
     display: flex;
+    width: 100%;;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -147,4 +166,11 @@ input:focus::placeholder
 
 .button_delete:active{
     opacity: 0.6;
+}
+
+.add_paragraph
+{
+    height: 0px;
+    overflow-y: hidden;
+    transition: height 0.5s ease-in-out;
 }
